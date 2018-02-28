@@ -1,0 +1,31 @@
+name: standard
+channels:
+  - conda-forge
+dependencies:
+  - xarray
+  # - basemap
+  - netcdf4
+  - jupyter
+  - astropy
+  - dask
+  - numpy
+  - scipy
+  - seaborn
+  - matplotlib
+  - scikit-image
+  - pytest
+  - future
+  - flake8
+  - cartopy
+  - ioam
+  - holoviews
+  - geoviews
+  - line_profiler
+  - jupyterlab
+  - pip:
+    - yapf
+    - codecov
+    - pytest-cov
+    - fpdf
+    - jupyter_contrib_nbextensions
+    - jupyter_nbextensions_configurator
