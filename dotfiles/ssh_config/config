@@ -1,0 +1,54 @@
+Host gfdl
+	HostName ssh.gfdl.noaa.gov
+        User Julius.Busecke
+        LocalForward 1522 public.gfdl.noaa.gov:22
+Host public
+	Hostname localhost
+	Port 1522
+	User Julius.Busecke
+Host gaea
+  	HostName                gaea-rsa.princeton.rdhpcs.noaa.gov
+  	User                    Julius.Busecke
+  	ControlMaster           auto
+  	LocalForward            50179 localhost:50179
+  	RemoteForward           40179 localhost:22
+
+Host analysis
+  	HostName                analysis-rsa.princeton.rdhpcs.noaa.gov
+  	User                    Julius.Busecke
+  	ControlMaster           auto
+Host tiger
+	HostName tiger.princeton.edu
+	ForwardAgent yes
+	User jbusecke
+	ServerAliveInterval 60
+Host tigress
+	HostName tigressdata.princeton.edu
+	ForwardAgent yes
+	User jbusecke
+	ServerAliveInterval 60
+Host haba
+	HostName habanero.rcs.columbia.edu
+	ForwardAgent yes
+	User jb3210
+	ServerAliveInterval 60
+Host yeti
+	HostName yetisubmit.cc.columbia.edu
+	ForwardAgent yes
+	User jb3210
+	ServerAliveInterval 60
+Host vislab
+  HostName vislab-desk.ldeo.columbia.edu
+  ForwardAgent yes
+  User julius
+  ServerAliveInterval 60
+Host sverdrup
+  HostName sverdrup.ldeo.columbia.edu
+  ForwardAgent yes
+  User julius
+  ServerAliveInterval 60
+Host imac
+	User juliusbusecke
+	HostName iMac.local
+	AddressFamily inet6
+	Protocol 2

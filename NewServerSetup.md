@@ -12,13 +12,19 @@ workflow, add modify the /.../DATA_MANAGEMENT/dotfiles... ssh config and cp to
 ## Software installation (to be filled in)
 ### Shell
 - install oh-my-zsh `sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"`
-- customize .zshrc or copy from `/Users/juliusbusecke/Work/DATA_MANAGEMENT/dotfiles/zshrc_remote`
+### git
 - setup git on remote machine
   - set up an rsa key and add to github via [these](https://help.github.com/articles/connecting-to-github-with-ssh/) instructions
-  - set git defaults with ``
-### git
-- clone environment setup repo to `code` mkdir that if necessary.
-`git clone https://github.com/jbusecke/conda_envs.git`
+  - set git defaults:
+    - `git config --global user.name "Mona Lisa"`
+    - `git config --global user.email "email@example.com"`
+- clone server setup repo `git clone git@github.com:jbusecke/server_setup.git`
+
+### dotfiles
+- Copy appropriate .zshrc from `server_setup/dotfiles`
+- same with .bashrc (e.g. the modules are not loaded if a script runs in bash)
+
+
 ### File Structure
 - ~~follow dir structure outlined in (other file, needs link) and create `code` in home directory. ` mkdir code notebooks projects shared_data`~~
 Execute `setup_root.sh` from the `./code/conda_envs` directory
