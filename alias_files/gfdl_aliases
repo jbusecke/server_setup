@@ -1,0 +1,5 @@
+alias CM2.6='cd /work/Julius.Busecke/CM2.6_staged/'
+alias CM2.6_source='cd /archive/Richard.Slater/CM2.6/'
+alias CM2.6_source_physics='cd /archive/wga/CM2.6/'
+alias ESM2.6_source='cd /archive/jgj/fre/siena_201303/ESM2.6/'
+alias jhome='cd /work/Julius.Busecke/'
