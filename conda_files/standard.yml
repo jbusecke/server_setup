@@ -21,6 +21,7 @@ dependencies:
   - line_profiler
   - jupyterlab
   - sympy
+  - palettable
   - pip:
     - yapf
     - codecov
