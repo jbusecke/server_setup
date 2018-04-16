@@ -22,6 +22,7 @@ dependencies:
   - jupyterlab
   - sympy
   - palettable
+  - gsw
   - pip:
     - yapf
     - codecov
