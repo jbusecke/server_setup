@@ -23,6 +23,7 @@ dependencies:
   - sympy
   - palettable
   - gsw
+  - numba
   - pip:
     - yapf
     - codecov
