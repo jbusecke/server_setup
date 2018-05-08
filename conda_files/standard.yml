@@ -24,7 +24,11 @@ dependencies:
   - palettable
   - gsw
   - numba
+  - numpydoc
   - pip:
+    - sphinx 
+    - sphinx-autobuild
+    - sphinx_rtd_theme
     - yapf
     - codecov
     - pytest-cov
