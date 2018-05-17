@@ -34,7 +34,7 @@ Execute `setup_root.sh` from the `./code/conda_envs` directory
 - install miniconda to user dir `bash miniconda.sh -b -p $HOME/code/miniconda`
 - ~~set path for miniconda `export PATH="$HOME/code/miniconda/bin:$PATH"`~~
 - set path for miniconda in .zshrc `export PATH="$HOME/code/miniconda/bin:$PATH"`
-- create standard environment `conda env create -f ~/code/conda_envs/standard.yml`
+- create standard environment `conda env create -f ~/code/server_setup/standard.yml`
 
 #### Managing Conda envs
 https://conda.io/docs/user-guide/tasks/manage-environments.html
