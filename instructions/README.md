@@ -18,7 +18,7 @@ workflow, add modify the /.../DATA_MANAGEMENT/dotfiles... ssh config and cp to
   - set git defaults:
     - `git config --global user.name "Mona Lisa"`
     - `git config --global user.email "email@example.com"`
-- clone server setup repo `git clone git@github.com:jbusecke/server_setup.git`
+- Create a subfolder `code` and in there clone server setup repo `git clone git@github.com:jbusecke/server_setup.git`
 
 ### dotfiles
 - Copy appropriate .zshrc from `server_setup/dotfiles`
@@ -34,7 +34,7 @@ Execute `setup_root.sh` from the `./code/conda_envs` directory
 - install miniconda to user dir `bash miniconda.sh -b -p $HOME/code/miniconda`
 - ~~set path for miniconda `export PATH="$HOME/code/miniconda/bin:$PATH"`~~
 - set path for miniconda in .zshrc `export PATH="$HOME/code/miniconda/bin:$PATH"`
-- create standard environment `conda env create -f ~/code/server_setup/standard.yml`
+- create standard environment `conda env create -f /code/server_setup/conda_files/standard.yml`
 
 #### Managing Conda envs
 https://conda.io/docs/user-guide/tasks/manage-environments.html
