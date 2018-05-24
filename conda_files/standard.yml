@@ -25,6 +25,7 @@ dependencies:
   - gsw
   - numba
   - numpydoc
+  - click
   - pip:
     - sphinx 
     - sphinx-autobuild
