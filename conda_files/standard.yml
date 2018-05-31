@@ -9,6 +9,7 @@ dependencies:
   - astropy
   - dask
   - distributed
+  - dask-jobqueue
   - mpi4py
   - numpy
   - scipy
