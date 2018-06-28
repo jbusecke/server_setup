@@ -9,6 +9,7 @@ dependencies:
   - astropy
   - dask
   - distributed
+  - dask-jobqueue
   - mpi4py
   - numpy
   - scipy
@@ -20,7 +21,16 @@ dependencies:
   - cartopy
   - line_profiler
   - jupyterlab
+  - sympy
+  - palettable
+  - gsw
+  - numba
+  - numpydoc
+  - click
   - pip:
+    - sphinx 
+    - sphinx-autobuild
+    - sphinx_rtd_theme
     - yapf
     - codecov
     - pytest-cov
@@ -28,9 +38,10 @@ dependencies:
     - jupyter_contrib_nbextensions
     - jupyter_nbextensions_configurator
     - "--editable=git+https://github.com/pydata/xarray.git@master#egg=xarray"
-    - "--editable=git+https://github.com/jbusecke/jbusecke_cm2.6.git@master#egg=jbusecke_cm2.6"
+    #- "--editable=git+https://github.com/jbusecke/jbusecke_cm2.6.git@master#egg=jbusecke_cm2.6"
     - "--editable=git+https://github.com/xgcm/xmitgcm.git@master#egg=xmitgcm"
     - "--editable=git+https://github.com/xgcm/xgcm.git@master#egg=xgcm"
     - "--editable=git+https://github.com/jbusecke/xarrayutils.git@master#egg=xarrayutils"
-    - "--editable=git+https://github.com/jbusecke/mitgcm_surface_tracer.git@master#egg=mitgcm_surface_tracer"
-    - "--editable=git+https://github.com/jbusecke/aviso_products.git@master#egg=aviso_products"
+    #- "--editable=git+https://github.com/jbusecke/mitgcm_surface_tracer.git@master#egg=mitgcm_surface_tracer"
+    #- "--editable=git+https://github.com/jbusecke/aviso_products.git@master#egg=aviso_products"
+    #- "--editable=git+https://github.com/jbusecke/xmovie.git@master#egg=xmovie"

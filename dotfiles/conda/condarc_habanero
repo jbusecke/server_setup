@@ -1,0 +1,7 @@
+envs_dir:
+  - /rigel/ocp/users/jb3210/conda/envs
+pkgs_dirs:
+  - /rigel/ocp/users/jb3210/conda/pkgs
+channels:
+  - conda-forge
+  - defaults
