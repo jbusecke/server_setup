@@ -3,7 +3,7 @@ channels:
   - conda-forge
 dependencies:
   # - xarray
-  - basemap
+  # - basemap
   - netcdf4
   - jupyter
   - astropy
@@ -27,6 +27,9 @@ dependencies:
   - numba
   - numpydoc
   - click
+  - flake8
+# for jupyterlab and extentions
+  - nodejs
   - pip:
     - sphinx 
     - sphinx-autobuild
