@@ -1,6 +1,7 @@
 name: standard
 channels:
   - conda-forge
+  - pyviz
 dependencies:
   # - xarray
   # - basemap
@@ -28,6 +29,8 @@ dependencies:
   - numpydoc
   - click
   - flake8
+  - hvplot
+  - geoviews
 # for jupyterlab and extentions
   - nodejs
   - pip:
