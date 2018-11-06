@@ -1,1 +1,3 @@
 alias geoclim='cd /scratch/gpfs2/GEOCLIM'
+alias tigress='cd /tigress/jbusecke'
+
