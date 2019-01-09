@@ -1,0 +1,34 @@
+distributed:
+  scheduler:
+    bandwidth: 1000000000     # GB MB/s estimated worker-worker bandwidth
+  worker:
+    memory:
+      target: 0.90  # Avoid spilling to disk
+      spill: False  # Avoid spilling to disk
+      pause: 0.80  # fraction at which we pause worker threads
+      terminate: 0.95  # fraction at which we terminate the worker
+  comm:
+    compression: null
+
+jobqueue:
+  moab:
+    name: dask-worker
+
+    # Dask worker options
+    cores: 8                    # Total number of cores per job
+    memory: '96GB'              # Total amount of memory per job
+    processes: 6                # Number of Python processes per job
+
+    interface: eth0             # Network interface to use like eth0 or ib0
+    death-timeout: 60           # Number of seconds to wait if a worker can not find a scheduler
+    local-directory: $TMPDIR #/tmp       # Location of fast local storage like /scratch or $TMPDIR
+
+    # PBS resource manager options
+    queue: analysis
+    project: null #gfdl_m
+    walltime: '06:00:00'
+    extra: ""
+    env-extra: ['source .zshrc']  # Replace this likely with your .cshrc file
+    resource-spec: 'pmem=96G'
+    job-extra: ['-d /home/Julius.Busecke', '-M none']  # Make sure to use your First.Last!
+    name: dask-worker

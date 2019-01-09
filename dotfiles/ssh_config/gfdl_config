@@ -1,0 +1,5 @@
+
+Host tiger-offcampus
+     User jbusecke
+     Hostname tiger.princeton.edu
+     ProxyCommand ssh -A jbusecke@nobel.princeton.edu -W %h:%p
