@@ -3,7 +3,8 @@ export PATH="/usr/bin:$PATH"
 echo $PATH
 # Script that copies files to tigress, while preserving the folder structure.
 SOURCEROOT='/archive/Julius.Busecke'
-TARGETROOT='tiger-offcampus:/tigress/jbusecke/GFDL_mirror'
+#TARGETROOT='tiger-offcampus:/tigress/jbusecke/GFDL_mirror'
+TARGETROOT='tiger-offcampus:/tigress/GEOCLIM/LRGROUP/jbusecke/GFDL_mirror'
 FILE=$1
 FILEPATH=$(pwd)
 FULLPATH=$FILEPATH/$FILE
