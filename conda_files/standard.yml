@@ -32,9 +32,12 @@ dependencies:
   - hvplot
   - geoviews
   - zarr
+  - nc-time-axis
 # for jupyterlab and extentions
   - nodejs
   - pip:
+    #jupyterlab extensions
+    - jupyterlab_snippets
     - sphinx 
     - sphinx-autobuild
     - sphinx_rtd_theme

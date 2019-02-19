@@ -12,6 +12,10 @@ workflow, add modify the /.../DATA_MANAGEMENT/dotfiles... ssh config and cp to
 ## Software installation (to be filled in)
 ### Shell
 - install oh-my-zsh `sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"`
+#### zsh substring search
+just add `history-substring-search` to the plugins…
+I added this to the ‘standard’ `.zshrc` file.
+
 ### git
 - setup git on remote machine
   - set up an rsa key and add to github via [these](https://help.github.com/articles/connecting-to-github-with-ssh/) instructions
