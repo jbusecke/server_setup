@@ -1,3 +1,7 @@
-alias geoclim='cd /scratch/gpfs2/GEOCLIM'
-alias tigress='cd /tigress/jbusecke'
+alias gc='cd /scratch/gpfs2/GEOCLIM/LRGROUP'
+alias gct='cd /tigress/GEOCLIM/LRGROUP'
+alias jb='cd /scratch/gpfs/jbusecke'
+alias jbt='cd /tigress/jbusecke'
+alias jbgc='cd /tigress/GEOCLIM/LRGROUP/jbusecke'
+
 
