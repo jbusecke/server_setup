@@ -225,7 +225,7 @@ c.NotebookApp.password = 'sha1:25fac941b482:f316b7b531b8ba9de57d1484a418712e3a95
 #c.NotebookApp.password_required = False
 
 ## The port the notebook server will listen on.
-c.NotebookApp.port = 9997
+c.NotebookApp.port = 6655
 
 ## The number of additional ports to try if the specified port is not available.
 #c.NotebookApp.port_retries = 50
