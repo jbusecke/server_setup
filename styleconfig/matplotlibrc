@@ -1,6 +1,6 @@
-TPLOTLIBRC FORMAT
-
-# This is a sample matplotlib configuration file - you can find a copy
+#### MATPLOTLIBRC FORMAT
+#
+#This is a sample matplotlib configuration file - you can find a copy
 # of it on your system in
 # site-packages/matplotlib/mpl-data/matplotlibrc.  If you edit it
 # there, please note that it will be overwritten in your next install.
@@ -203,7 +203,7 @@ TPLOTLIBRC FORMAT
 # settings for axes and ticks. Special text sizes can be defined
 # relative to font.size, using the following values: xx-small, x-small,
 # small, medium, large, x-large, xx-large, larger, or smaller
-#font.size           : 10.0
+font.size           : 200.0 #10.0
 #font.serif          : DejaVu Serif, Bitstream Vera Serif, New Century Schoolbook, Century Schoolbook L, Utopia, ITC Bookman, Bookman, Nimbus Roman No9 L, Times New Roman, Times, Palatino, Charter, serif
 #font.sans-serif     : DejaVu Sans, Bitstream Vera Sans, Lucida Grande, Verdana, Geneva, Lucid, Arial, Helvetica, Avant Garde, sans-serif
 #font.cursive        : Apple Chancery, Textile, Zapf Chancery, Sand, Script MT, Felipa, cursive
