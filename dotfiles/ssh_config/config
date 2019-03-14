@@ -1,3 +1,10 @@
+# Needed to add ssh keys to keychain
+Host *
+  	AddKeysToAgent yes
+  	UseKeychain yes
+  	IdentityFile ~/.ssh/id_rsa
+
+# GFDL ports 
 Host gfdl
 	HostName ssh.gfdl.noaa.gov
         User Julius.Busecke
