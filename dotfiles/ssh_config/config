@@ -34,6 +34,8 @@ Host tigress
 	ForwardAgent yes
 	User jbusecke
 	ServerAliveInterval 60
+	LocalForward 6655 localhost:6655
+	LocalForward 6657 localhost:6657
 Host haba
 	HostName habanero.rcs.columbia.edu
 	ForwardAgent yes
