@@ -4,7 +4,32 @@ Host *
   	UseKeychain yes
   	IdentityFile ~/.ssh/id_rsa
 
-# GFDL ports 
+########################################
+#                  GFDL                #
+########################################
+Host analysis
+        HostName analysis-rsa.princeton.rdhpcs.noaa.gov
+        User Julius.Busecke
+        LocalForward 3344 an200:22
+        LocalForward 4455 an102:22
+Host an200
+        Hostname localhost
+        Port 3344
+        User Julius.Busecke
+        IdentityFile ~/.ssh/id_rsa
+        LocalForward 8881 localhost:8881
+        LocalForward 8882 an200:8882
+        LocalForward 8884 localhost:8888
+        LocalForward 8885 localhost:8882
+Host an102
+        Hostname localhost
+        Port 4455
+        User Julius.Busecke
+        IdentityFile ~/.ssh/id_rsa
+        LocalForward 5551 localhost:8881
+        LocalForward 5552 an102:8882
+        LocalForward 5553 localhost:5757
+        LocalForward 5554 localhost:8888
 Host gfdl
 	HostName ssh.gfdl.noaa.gov
         User Julius.Busecke
@@ -20,10 +45,10 @@ Host gaea
   	LocalForward            50179 localhost:50179
   	RemoteForward           40179 localhost:22
 
-Host analysis
-  	HostName                analysis-rsa.princeton.rdhpcs.noaa.gov
-  	User                    Julius.Busecke
-  	ControlMaster           auto
+##################################
+#            Princeton           #
+##################################
+
 Host tiger
 	HostName tiger.princeton.edu
 	ForwardAgent yes
