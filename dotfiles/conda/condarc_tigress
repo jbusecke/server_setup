@@ -1,4 +1,4 @@
 envs_dir:
-  - /tigress/jbusecke/code/conda/envs
+  - /tigress/GEOCLIM/LRGROUP/jbusecke/code/conda/envs
 pkgs_dirs:
-  - /tigress/jbusecke/code/conda/pkgs
+  - /tigress/GEOCLIM/LRGROUP/jbusecke/code/conda/pkgs
