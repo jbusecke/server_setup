@@ -1,7 +1,8 @@
 #!/bin/bash
 # script that stages files from archive folders into work directories
-SOURCEROOT='/archive/Julius.Busecke'
-TARGETROOT='/work/Julius.Busecke'
+
+SOURCEROOT=/archive/$USER
+TARGETROOT=/work/$USER
 FILE=$1
 PATH=$(pwd)
 FULLPATH=$PATH/$FILE
