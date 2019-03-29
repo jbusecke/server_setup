@@ -1,0 +1,9 @@
+allow_other_channels: False
+
+channels:
+  - https://anaconda.rdhpcs.noaa.gov/conda-forge
+
+#envs_dir:
+#  - /rigel/ocp/users/jb3210/conda/envs
+#pkgs_dirs:
+#  - /rigel/ocp/users/jb3210/conda/pkgs
