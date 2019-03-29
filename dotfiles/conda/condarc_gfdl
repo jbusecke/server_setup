@@ -1,7 +1,14 @@
-allow_other_channels: False
+#default_channels:
+#  - https://anaconda.rdhpcs.noaa.gov/conda-forge
 
-channels:
-  - https://anaconda.rdhpcs.noaa.gov/conda-forge
+# This enables my environments to seemlessly install with the GFDL mirror of conda-forge. Unfortunately pyviz and other channels are not mirrored yet.
+channel_alias: https://anaconda.rdhpcs.noaa.gov/
+
+always_yes: True
+
+create_default_packages:
+  - pytest-runner
+  - pytest
 
 #envs_dir:
 #  - /rigel/ocp/users/jb3210/conda/envs
