@@ -1,2 +1,3 @@
 # Exclude src folders from conda installation
-src/ 
+src/
+/conda_files/src/
