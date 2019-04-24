@@ -1,3 +1,6 @@
+channels: 
+  - conda-forge
+
 envs_dir:
   - /tigress/GEOCLIM/LRGROUP/jbusecke/code/conda/envs
 pkgs_dirs:

@@ -1,0 +1,17 @@
+{
+    // Sidebar
+    // @jupyterlab/application-extension:sidebar
+    // Sidebar layout settings.
+    // *****************************************
+
+    // Overrides
+    // Overrides for where to show sidebar items
+    "overrides": {
+      "github-file-browser": "right",
+      "jp-running-sessions": "right",
+      "dask-dashboard-launcher": "right",
+      "cell-tools": "right",
+      "tab-manager": "right",
+      "command-palette": "right"
+    }
+}
