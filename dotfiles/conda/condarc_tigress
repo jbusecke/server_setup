@@ -1,4 +1,5 @@
-channels: 
+channels:
+  - defaults # do not delete this, it lead to some trouble with my install (e.g. cannot update conda anymore) 
   - conda-forge
 
 envs_dir:
