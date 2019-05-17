@@ -1,0 +1,17 @@
+name: base
+channels:
+  - conda-forge
+  - pyviz
+  dependencies:
+    - dask-jobqueue
+    - mpi4py
+    - pytest
+    - pytest-runner
+    - future
+    - line_profiler
+    - jupyterlab
+    - jupyter
+    - numpydoc
+    - black
+  # for jupyterlab and extentions
+    - nodejs
