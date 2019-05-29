@@ -2,7 +2,13 @@ channels:
   - defaults # do not delete this, it lead to some trouble with my install (e.g. cannot update conda anymore) 
   - conda-forge
 
+always_yes: true
+
+create_default_packages:
+  - jupyterlab
+  - jupyter
 envs_dir:
   - /tigress/GEOCLIM/LRGROUP/jbusecke/code/conda/envs
+
 pkgs_dirs:
   - /tigress/GEOCLIM/LRGROUP/jbusecke/code/conda/pkgs
