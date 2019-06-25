@@ -13,5 +13,6 @@ channels:
     - jupyter
     - numpydoc
     - black
+  # widgetsnbextension for the tqdm progressbar
   # for jupyterlab and extentions
     - nodejs
