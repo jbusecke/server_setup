@@ -1,0 +1,29 @@
+name: standard
+channels:
+  - conda-forge
+dependencies:
+  - jupyter
+  - jupyterlab
+  - nb_conda_kernels
+  # every computing env should have ipykernel installed
+  - pytest
+  - pytest-runner
+  # - dask-jobqueue
+  - numpydoc
+  - black
+  - line_profiler
+  # - future
+# for jupyterlab and extentions
+  - nodejs
+  - pip
+  - pip:
+    #jupyterlab extensions
+    - jupyterlab_snippets
+    - sphinx 
+    - sphinx-autobuild
+    - sphinx_rtd_theme
+    - codecov
+    - pytest-cov
+    - fpdf
+    #- jupyter_contrib_nbextensions
+    #- jupyter_nbextensions_configurator
