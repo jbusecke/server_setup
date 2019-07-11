@@ -1,0 +1,46 @@
+Host tigressgateway
+     User jbusecke
+     Hostname tigressgateway.princeton.edu
+     ControlMaster auto
+     ControlPersist yes
+     ForwardAgent yes
+     ControlPath ~/.ssh/sockets/%p-%h-%r
+
+Host tiger
+     User jbusecke
+     ForwardAgent yes
+     Hostname tigercpu.princeton.edu
+     ProxyCommand ssh -A jbusecke@tigressgateway -W %h:%p
+
+Host geoclim.princeton.edu
+     User jbusecke
+     ForwardAgent yes
+     Hostname geoclim.princeton.edu
+     ProxyCommand ssh -A jbusecke@tigressgateway -W %h:%p
+
+Host tigressdata
+     User jbusecke
+     ForwardAgent yes
+     Hostname tigressdata.princeton.edu
+     ProxyCommand ssh -A jbusecke@tigressgateway -W %h:%p
+
+Host gfdl
+        HostName ssh.gfdl.noaa.gov
+        User Julius.Busecke
+        LocalForward 3255 public.gfdl.noaa.gov:22
+        LocalForward 3128 mayflower:3128
+        LocalForward 2200 gitlab.gfdl.noaa.gov:22
+Host public
+        Hostname localhost
+        Port 3255
+        User Julius.Busecke
+        LocalForward 3409 localhost:3409
+Host analysis
+        HostName analysis-rsa.princeton.rdhpcs.noaa.gov
+        User Julius.Busecke
+        LocalForward 7789 an200:22
+Host an200
+        Hostname localhost
+        Port 7789
+        User Julius.Busecke
+        LocalForward 6565 localhost:6565
