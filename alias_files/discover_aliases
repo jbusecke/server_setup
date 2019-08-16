@@ -1,4 +1,5 @@
 alias model_dev='cd /gpfsm/dhome/jjbuseck/jjbuseck/models/MOM6_dev'
-alias hr_model_dev='cd /gpfsm/dhome/jjbuseck/jjbuseck/models/MOM6_dev/geoclim-mom6/MOM6_SIS2_COBALT/BOM_0125_core_control'
+alias hr_model_dev='cd /gpfsm/dhome/jjbuseck/jjbuseck/models/MOM6_dev/geoclim-mom6/MOM6_SIS2_COBALT/BOM_0125_JRA_1.3'
+alias model_prod='cd /discover/nobackup/jjbuseck/models/MOM6_production/BOM_0125_r1.cycle4_cont/geoclim-mom6/MOM6_SIS2_COBALT/BOM_0125_JRA_1.3'
 alias sq='squeue -u jjbuseck'
 alias sqs='squeue -u jjbuseck --start'

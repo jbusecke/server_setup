@@ -24,23 +24,13 @@ Host tigressdata
      Hostname tigressdata.princeton.edu
      ProxyCommand ssh -A jbusecke@tigressgateway -W %h:%p
 
-Host gfdl
-        HostName ssh.gfdl.noaa.gov
-        User Julius.Busecke
-        LocalForward 3255 public.gfdl.noaa.gov:22
-        LocalForward 3128 mayflower:3128
-        LocalForward 2200 gitlab.gfdl.noaa.gov:22
-Host public
-        Hostname localhost
-        Port 3255
-        User Julius.Busecke
-        LocalForward 3409 localhost:3409
+Host analysis_node
+     Hostname localhost
+     Port 7789
+     User Julius.Busecke
+     IdentityFile ~/.ssh/id_rsa    
+
 Host analysis
-        HostName analysis-rsa.princeton.rdhpcs.noaa.gov
-        User Julius.Busecke
-        LocalForward 7789 an200:22
-Host an200
-        Hostname localhost
-        Port 7789
-        User Julius.Busecke
-        LocalForward 6565 localhost:6565
+     HostName analysis-rsa.princeton.rdhpcs.noaa.gov
+     User Julius.Busecke
+     LocalForward 7789 an101:22

@@ -28,6 +28,9 @@ test -f /etc/profile.dos && . /etc/profile.dos
 #export PILOTPORT=/dev/pilot
 #export PILOTRATE=115200
 
+# Fix these annoying `ESC[` in git output
+export LESS=eFRX
+
 source $HOME/.aliases
 test -s ~/.alias && . ~/.alias
 
