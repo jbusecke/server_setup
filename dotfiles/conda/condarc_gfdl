@@ -1,0 +1,24 @@
+default_channels:
+ - defaults
+ - conda-forge
+# - pyviz 
+# - https://anaconda.rdhpcs.noaa.gov/conda-forge
+
+#allow_other_channels: False
+
+#always_yes: True
+
+create_default_packages:
+  - pytest-runner
+  - pytest
+  - pip
+  - jupyterlab
+  # add the ipykernel thing to be able to interactively switch envs in jupyterlab
+
+envs_dir:
+  - /work/Julius.Busecke/code/conda/envs
+
+pkgs_dir:
+  - /work/Julius.Busecke/code/conda/pkgs
+
+
