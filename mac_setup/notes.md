@@ -11,3 +11,14 @@
 
 
 set up ssh keys - I might be able to automatize this aswell (Manual, at this point)
+
+## more notes
+Apps to reinstall:
+
+- DEVONthink 3
+	- Special setup?
+- HP Printer Software (which one is the proper one?
+- LRTimeLapse...(How?)
+- Microsoft Office? Probably don't need it
+- ROLAND interface driver
+- LATEX?
