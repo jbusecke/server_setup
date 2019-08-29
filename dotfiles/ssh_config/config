@@ -16,7 +16,6 @@ Host an200
         Hostname localhost
         Port 3344
         User Julius.Busecke
-        IdentityFile ~/.ssh/id_rsa
         LocalForward 8881 localhost:8881
         LocalForward 8882 an200:8882
         LocalForward 8884 localhost:8888

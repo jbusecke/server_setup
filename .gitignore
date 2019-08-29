@@ -1,3 +1,6 @@
 # Exclude src folders from conda installation
 src/
 /conda_files/src/
+
+# some jupyterlab temp stuff
+*.jupyterlab-workspace

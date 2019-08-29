@@ -1,0 +1,36 @@
+Host tigressgateway
+     User jbusecke
+     Hostname tigressgateway.princeton.edu
+     ControlMaster auto
+     ControlPersist yes
+     ForwardAgent yes
+     ControlPath ~/.ssh/sockets/%p-%h-%r
+
+Host tiger
+     User jbusecke
+     ForwardAgent yes
+     Hostname tigercpu.princeton.edu
+     ProxyCommand ssh -A jbusecke@tigressgateway -W %h:%p
+
+Host geoclim.princeton.edu
+     User jbusecke
+     ForwardAgent yes
+     Hostname geoclim.princeton.edu
+     ProxyCommand ssh -A jbusecke@tigressgateway -W %h:%p
+
+Host tigressdata
+     User jbusecke
+     ForwardAgent yes
+     Hostname tigressdata.princeton.edu
+     ProxyCommand ssh -A jbusecke@tigressgateway -W %h:%p
+
+Host analysis_node
+     Hostname localhost
+     Port 7789
+     User Julius.Busecke
+     IdentityFile ~/.ssh/id_rsa    
+
+Host analysis
+     HostName analysis-rsa.princeton.rdhpcs.noaa.gov
+     User Julius.Busecke
+     LocalForward 7789 an101:22
