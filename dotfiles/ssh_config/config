@@ -1,65 +1,206 @@
-# Needed to add ssh keys to keychain
 Host *
-  	AddKeysToAgent yes
-  	UseKeychain yes
-  	IdentityFile ~/.ssh/id_rsa
+	UseKeychain yes
+	AddKeysToAgent yes
+Host discover
+	HostName discover.nccs.nasa.gov
+    	User jjbuseck
+    	LogLevel Quiet
+    	ProxyCommand ssh -l jjbuseck login.nccs.nasa.gov direct %h
+    	Protocol 2
+Host dirac
+	HostName dirac.nccs.nasa.gov
+        User jjbuseck
+        LogLevel Quiet
+        ProxyCommand ssh -l jjbuseck login.nccs.nasa.gov direct %h
+        Protocol 2
+Host gfdl
+	HostName ssh.gfdl.noaa.gov
+        User Julius.Busecke
+        #LocalForward 3254 public.gfdl.noaa.gov:22
+        #LocalForward 3254 public6.gfdl.noaa.gov:22
+	LocalForward 3254 public5.gfdl.noaa.gov:22
+	LocalForward 3128 mayflower:3128
+        LocalForward 2200 gitlab.gfdl.noaa.gov:22
+Host gitlab gitlab.gfdl.noaa.gov
+    	HostName 127.0.0.1
+    	Port 2200
+    	User git
+Host public
+	Hostname localhost
+	Port 3254
+	User Julius.Busecke
+	IdentityFile ~/.ssh/id_rsa_gfdl
+Host gaea
+       Hostname gaea-rsa.princeton.rdhpcs.noaa.gov
+       User Julius.Busecke
+       ControlMaster auto
+       ControlPath ~/.ssh/%r@%h:%p
 
-########################################
-#                  GFDL                #
-########################################
-Host analysis
-        HostName analysis-rsa.princeton.rdhpcs.noaa.gov
+###########################################
+# Boulder Bastion GFDL STUFF              #
+# (for when the princeton bastion is down #
+###########################################
+Host analysisalt
+        HostName analysis-rsa.boulder.rdhpcs.noaa.gov
         User Julius.Busecke
-        LocalForward 3344 an200:22
-        LocalForward 4455 an102:22
-Host an200
+        LocalForward 3341 an200:22
+        LocalForward 6671 an103:22
+Host an200alt
         Hostname localhost
-        Port 3344
+        Port 3341
         User Julius.Busecke
+        IdentityFile ~/.ssh/id_rsa_gfdl
         LocalForward 8881 localhost:8881
         LocalForward 8882 an200:8882
         LocalForward 8884 localhost:8888
         LocalForward 8885 localhost:8882
+Host an103alt
+        Hostname localhost
+        Port 6671
+        User Julius.Busecke
+        IdentityFile ~/.ssh/id_rsa_gfdl
+
+###############################
+# Princeton Bastion GFDL STUFF#
+###############################
+Host analysis
+  	HostName analysis-rsa.princeton.rdhpcs.noaa.gov
+  	User Julius.Busecke
+	LocalForward 7001 an001:22
+	LocalForward 7004 an004:22
+	LocalForward 7008 an008:22
+	LocalForward 7010 an010:22
+	LocalForward 7012 an012:22
+	LocalForward 7014 an014:22
+	LocalForward 7101 an101:22
+	LocalForward 7105 an105:22
+	LocalForward 7106 an106:22
+	LocalForward 7107 an107:22
+	LocalForward 7108 an108:22
+        LocalForward 3344 an200:22
+        LocalForward 4455 an102:22
+	LocalForward 6677 an103:22
+	LocalForward 7788 an104:22
+Host an001
+        Hostname localhost
+        Port 7001
+        User Julius.Busecke
+        IdentityFile ~/.ssh/id_rsa_gfdl
+Host an004
+        Hostname localhost
+        Port 7004
+        User Julius.Busecke
+        IdentityFile ~/.ssh/id_rsa_gfdl
+Host an008
+        Hostname localhost
+        Port 7008
+        User Julius.Busecke
+        IdentityFile ~/.ssh/id_rsa_gfdl
+Host an010
+        Hostname localhost
+        Port 7010
+        User Julius.Busecke
+        IdentityFile ~/.ssh/id_rsa_gfdl
+Host an012
+        Hostname localhost
+        Port 7012
+        User Julius.Busecke
+        IdentityFile ~/.ssh/id_rsa_gfdl
+Host an105
+        Hostname localhost
+        Port 7105
+        User Julius.Busecke
+        IdentityFile ~/.ssh/id_rsa_gfdl
+Host an106
+        Hostname localhost
+        Port 7106
+        User Julius.Busecke
+        IdentityFile ~/.ssh/id_rsa_gfdl
+Host an107
+        Hostname localhost
+        Port 7107
+        User Julius.Busecke
+        IdentityFile ~/.ssh/id_rsa_gfdl
+Host an108
+        Hostname localhost
+        Port 7108
+        User Julius.Busecke
+        IdentityFile ~/.ssh/id_rsa_gfdl
+Host an014
+        Hostname localhost
+        Port 7014
+        User Julius.Busecke
+        IdentityFile ~/.ssh/id_rsa_gfdl
+Host an200
+      	Hostname localhost
+      	Port 3344
+      	User Julius.Busecke
+      	IdentityFile ~/.ssh/id_rsa_gfdl
+      	LocalForward 8881 localhost:8881
+        LocalForward 8882 an200:8882
+	LocalForward 8884 localhost:8888
+	LocalForward 8885 localhost:8882
 Host an102
         Hostname localhost
         Port 4455
         User Julius.Busecke
-        IdentityFile ~/.ssh/id_rsa
+        IdentityFile ~/.ssh/id_rsa_gfdl
         LocalForward 5551 localhost:8881
         LocalForward 5552 an102:8882
         LocalForward 5553 localhost:5757
         LocalForward 5554 localhost:8888
-Host gfdl
-	HostName ssh.gfdl.noaa.gov
+Host an101
+        Hostname localhost
+        Port 7101
         User Julius.Busecke
-        LocalForward 1522 public.gfdl.noaa.gov:22
-Host public
-	Hostname localhost
-	Port 1522
-	User Julius.Busecke
-Host gaea
-  	HostName                gaea-rsa.princeton.rdhpcs.noaa.gov
-  	User                    Julius.Busecke
-  	ControlMaster           auto
-  	LocalForward            50179 localhost:50179
-  	RemoteForward           40179 localhost:22
-
-##################################
-#            Princeton           #
-##################################
-
+        IdentityFile ~/.ssh/id_rsa_gfdl
+        LocalForward 6661 localhost:6661
+        LocalForward 6662 localhost:6662
+Host an103
+        Hostname localhost
+        Port 6677
+        User Julius.Busecke
+        IdentityFile ~/.ssh/id_rsa_gfdl
+        LocalForward 4321 localhost:4321
+        LocalForward 4221 an103:4221
+	LocalForward 4222 localhost:8888
+Host an104
+        Hostname localhost
+        Port 7788
+        User Julius.Busecke
+        IdentityFile ~/.ssh/id_rsa_gfdl
+        LocalForward 5432 localhost:5432
+        LocalForward 5332 an104:5332
 Host tiger
 	HostName tiger.princeton.edu
 	ForwardAgent yes
 	User jbusecke
+	LocalForward 1223 localhost:1223
+	LocalForward 1224 tigercpu:1224
 	ServerAliveInterval 60
-Host tigress
+
+Host tiger_clean
+        HostName tiger.princeton.edu
+        ForwardAgent yes
+        User jbusecke
+        ServerAliveInterval 60
+
+Host tigressdata
 	HostName tigressdata.princeton.edu
 	ForwardAgent yes
 	User jbusecke
+	#ControlPath ~/.ssh/controlmasters/%r@%h:%p
+    	#ControlMaster auto
+    	#ControlPersist 24h
 	ServerAliveInterval 60
 	LocalForward 6655 localhost:6655
+        LocalForward 6656 tigressdata:6656
 	LocalForward 6657 localhost:6657
+	# NASA reverse forward
+	LocalForward 3300 localhost:19997
+	LocalForward 3301 localhost:19887
+	LocalForward 3302 localhost:17778
+        LocalForward 3303 localhost:19966
 Host haba
 	HostName habanero.rcs.columbia.edu
 	ForwardAgent yes
