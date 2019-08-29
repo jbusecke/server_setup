@@ -1,6 +1,11 @@
 Host *
 	UseKeychain yes
 	AddKeysToAgent yes
+
+###################
+#      NASA       #
+###################
+
 Host discover
 	HostName discover.nccs.nasa.gov
     	User jjbuseck
@@ -13,6 +18,10 @@ Host dirac
         LogLevel Quiet
         ProxyCommand ssh -l jjbuseck login.nccs.nasa.gov direct %h
         Protocol 2
+
+###################
+#      GFDL       #
+###################
 Host gfdl
 	HostName ssh.gfdl.noaa.gov
         User Julius.Busecke
@@ -36,119 +45,24 @@ Host gaea
        ControlMaster auto
        ControlPath ~/.ssh/%r@%h:%p
 
-###########################################
-# Boulder Bastion GFDL STUFF              #
-# (for when the princeton bastion is down #
-###########################################
-Host analysisalt
-        HostName analysis-rsa.boulder.rdhpcs.noaa.gov
-        User Julius.Busecke
-        LocalForward 3341 an200:22
-        LocalForward 6671 an103:22
-Host an200alt
-        Hostname localhost
-        Port 3341
-        User Julius.Busecke
-        IdentityFile ~/.ssh/id_rsa_gfdl
-        LocalForward 8881 localhost:8881
-        LocalForward 8882 an200:8882
-        LocalForward 8884 localhost:8888
-        LocalForward 8885 localhost:8882
-Host an103alt
-        Hostname localhost
-        Port 6671
-        User Julius.Busecke
-        IdentityFile ~/.ssh/id_rsa_gfdl
-
 ###############################
 # Princeton Bastion GFDL STUFF#
 ###############################
 Host analysis
   	HostName analysis-rsa.princeton.rdhpcs.noaa.gov
   	User Julius.Busecke
-	LocalForward 7001 an001:22
-	LocalForward 7004 an004:22
-	LocalForward 7008 an008:22
-	LocalForward 7010 an010:22
-	LocalForward 7012 an012:22
-	LocalForward 7014 an014:22
 	LocalForward 7101 an101:22
-	LocalForward 7105 an105:22
-	LocalForward 7106 an106:22
-	LocalForward 7107 an107:22
-	LocalForward 7108 an108:22
         LocalForward 3344 an200:22
-        LocalForward 4455 an102:22
-	LocalForward 6677 an103:22
-	LocalForward 7788 an104:22
-Host an001
-        Hostname localhost
-        Port 7001
-        User Julius.Busecke
-        IdentityFile ~/.ssh/id_rsa_gfdl
-Host an004
-        Hostname localhost
-        Port 7004
-        User Julius.Busecke
-        IdentityFile ~/.ssh/id_rsa_gfdl
-Host an008
-        Hostname localhost
-        Port 7008
-        User Julius.Busecke
-        IdentityFile ~/.ssh/id_rsa_gfdl
-Host an010
-        Hostname localhost
-        Port 7010
-        User Julius.Busecke
-        IdentityFile ~/.ssh/id_rsa_gfdl
-Host an012
-        Hostname localhost
-        Port 7012
-        User Julius.Busecke
-        IdentityFile ~/.ssh/id_rsa_gfdl
-Host an105
-        Hostname localhost
-        Port 7105
-        User Julius.Busecke
-        IdentityFile ~/.ssh/id_rsa_gfdl
-Host an106
-        Hostname localhost
-        Port 7106
-        User Julius.Busecke
-        IdentityFile ~/.ssh/id_rsa_gfdl
-Host an107
-        Hostname localhost
-        Port 7107
-        User Julius.Busecke
-        IdentityFile ~/.ssh/id_rsa_gfdl
-Host an108
-        Hostname localhost
-        Port 7108
-        User Julius.Busecke
-        IdentityFile ~/.ssh/id_rsa_gfdl
-Host an014
-        Hostname localhost
-        Port 7014
-        User Julius.Busecke
-        IdentityFile ~/.ssh/id_rsa_gfdl
+	# experimental (I want to just log in once)
+	# LocalForward 5551 an200:8881
+	# for the Dask dashboard
+	LocalForward 5552 an200:8787
 Host an200
       	Hostname localhost
       	Port 3344
       	User Julius.Busecke
-      	IdentityFile ~/.ssh/id_rsa_gfdl
       	LocalForward 8881 localhost:8881
         LocalForward 8882 an200:8882
-	LocalForward 8884 localhost:8888
-	LocalForward 8885 localhost:8882
-Host an102
-        Hostname localhost
-        Port 4455
-        User Julius.Busecke
-        IdentityFile ~/.ssh/id_rsa_gfdl
-        LocalForward 5551 localhost:8881
-        LocalForward 5552 an102:8882
-        LocalForward 5553 localhost:5757
-        LocalForward 5554 localhost:8888
 Host an101
         Hostname localhost
         Port 7101
@@ -156,21 +70,10 @@ Host an101
         IdentityFile ~/.ssh/id_rsa_gfdl
         LocalForward 6661 localhost:6661
         LocalForward 6662 localhost:6662
-Host an103
-        Hostname localhost
-        Port 6677
-        User Julius.Busecke
-        IdentityFile ~/.ssh/id_rsa_gfdl
-        LocalForward 4321 localhost:4321
-        LocalForward 4221 an103:4221
-	LocalForward 4222 localhost:8888
-Host an104
-        Hostname localhost
-        Port 7788
-        User Julius.Busecke
-        IdentityFile ~/.ssh/id_rsa_gfdl
-        LocalForward 5432 localhost:5432
-        LocalForward 5332 an104:5332
+#######################
+#     Princeton       #
+#######################
+
 Host tiger
 	HostName tiger.princeton.edu
 	ForwardAgent yes
@@ -201,6 +104,10 @@ Host tigressdata
 	LocalForward 3301 localhost:19887
 	LocalForward 3302 localhost:17778
         LocalForward 3303 localhost:19966
+#######################
+#       CU/LDEO       #
+#######################
+
 Host haba
 	HostName habanero.rcs.columbia.edu
 	ForwardAgent yes
@@ -221,8 +128,3 @@ Host sverdrup
   ForwardAgent yes
   User julius
   ServerAliveInterval 60
-Host imac
-	User juliusbusecke
-	HostName iMac.local
-	AddressFamily inet6
-	Protocol 2
