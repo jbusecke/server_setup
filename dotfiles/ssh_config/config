@@ -51,25 +51,28 @@ Host gaea
 Host analysis
   	HostName analysis-rsa.princeton.rdhpcs.noaa.gov
   	User Julius.Busecke
+	#IdentityFile ~/.ssh/id_rsa
 	LocalForward 7101 an101:22
         LocalForward 3344 an200:22
 	# experimental (I want to just log in once)
+	# however this doesnt work...
 	# LocalForward 5551 an200:8881
 	# for the Dask dashboard
-	LocalForward 5552 an200:8787
+	#LocalForward 5552 an200:8787
 Host an200
       	Hostname localhost
       	Port 3344
       	User Julius.Busecke
       	LocalForward 8881 localhost:8881
-        LocalForward 8882 an200:8882
+        #LocalForward 8882 an200:8882
+	LocalForward 8885 localhost:8787
 Host an101
         Hostname localhost
         Port 7101
         User Julius.Busecke
-        IdentityFile ~/.ssh/id_rsa_gfdl
-        LocalForward 6661 localhost:6661
-        LocalForward 6662 localhost:6662
+        IdentityFile ~/.ssh/id_rsa
+        #LocalForward 6661 localhost:6661
+        #LocalForward 6662 localhost:6662
 #######################
 #     Princeton       #
 #######################

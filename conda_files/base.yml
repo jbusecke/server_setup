@@ -5,15 +5,9 @@ channels:
   dependencies:
     - nb_conda_kernels
     # every computing env should have ipykernel installed
-    - jupyterlab
-    - dask-jobqueue
-    - mpi4py
-    - pytest
-    - pytest-runner
-    - future
-    - line_profiler
-    - jupyterlab
     - jupyter
+    - jupyterlab
+    - line_profiler
     - numpydoc
     - black
   # widgetsnbextension for the tqdm progressbar
@@ -21,3 +15,9 @@ channels:
     - nodejs
     # Personal workflow stuff
     - cookiecutter
+
+        # - dask-jobqueue
+        # - mpi4py
+        # - pytest
+        # - pytest-runner
+        # - future

@@ -3,10 +3,10 @@
 echo "Set OS defaults"
 
 #Set a blazingly fast keyboard repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 0.2
+defaults write NSGlobalDomain KeyRepeat -int 5
 
 #Set a shorter Delay until key repeat
-defaults write NSGlobalDomain InitialKeyRepeat -int 5
+defaults write NSGlobalDomain InitialKeyRepeat -int 20
 
 #Disable auto spelling
 defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
