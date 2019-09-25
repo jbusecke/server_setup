@@ -1,4 +1,4 @@
-name: base
+name: base_new
 channels:
   - conda-forge
   - pyviz
@@ -10,14 +10,12 @@ channels:
     - line_profiler
     - numpydoc
     - black
-  # widgetsnbextension for the tqdm progressbar
-  # for jupyterlab and extentions
     - nodejs
     # Personal workflow stuff
     - cookiecutter
-
-        # - dask-jobqueue
-        # - mpi4py
-        # - pytest
-        # - pytest-runner
-        # - future
+    - pip
+    - pip:
+      - graphviz
+      - sphinx
+      - sphinx-autobuild
+      - sphinx_rtd_theme

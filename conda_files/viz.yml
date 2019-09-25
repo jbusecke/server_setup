@@ -1,0 +1,14 @@
+name: viz
+channels:
+  - conda-forge
+  - pyviz
+  dependencies:
+    - ipykernel
+    - xarray
+    - geoviews
+    - datashader
+    - holoviews
+    - hvplot
+    - pip
+    - pip:
+      - xmovie

@@ -27,8 +27,8 @@ dependencies:
   - gsw
   - numba
   - numpydoc
-  - click
-  - flake8
+  # - click
+  # - flake8
   - hvplot
   - geoviews
   - zarr
@@ -38,7 +38,7 @@ dependencies:
   - pip:
     #jupyterlab extensions
     - jupyterlab_snippets
-    - sphinx 
+    - sphinx
     - sphinx-autobuild
     - sphinx_rtd_theme
     - yapf

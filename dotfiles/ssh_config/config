@@ -71,8 +71,9 @@ Host an101
         Port 7101
         User Julius.Busecke
         IdentityFile ~/.ssh/id_rsa
-        #LocalForward 6661 localhost:6661
-        #LocalForward 6662 localhost:6662
+        LocalForward 6661 localhost:6661
+        LocalForward 6662 localhost:6662
+	LocalForward 6665 localhost:8787
 #######################
 #     Princeton       #
 #######################

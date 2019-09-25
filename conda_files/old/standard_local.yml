@@ -2,10 +2,10 @@ name: standard
 channels:
   - conda-forge
 dependencies:
-  - xarray
+  # - xarray
   # - basemap
-  - netcdf4
-  - jupyter
+  # - netcdf4
+  # - jupyter
   - astropy
   - dask
   - numpy
@@ -23,9 +23,6 @@ dependencies:
   - line_profiler
   - jupyterlab
   - pip:
-    - yapf
     - codecov
     - pytest-cov
     - fpdf
-    - jupyter_contrib_nbextensions
-    - jupyter_nbextensions_configurator
