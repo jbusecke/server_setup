@@ -6,6 +6,11 @@ My universal base environment is in this folder as `base.yml`. In order to insta
 ```
 conda env update -f base.yml
 ```
+Then activate the base again and install all the jupyterlab extensions:
+```
+./../jupyterlab/install_extensions.sh
+```
+
 Thats it.
 
 ### some old crap that was relevant for discover.
