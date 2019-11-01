@@ -3,3 +3,10 @@ Host tiger-offcampus
      User jbusecke
      Hostname tiger.princeton.edu
      ProxyCommand ssh -A jbusecke@nobel.princeton.edu -W %h:%p
+
+Host discover
+     HostName discover.nccs.nasa.gov
+     User jjbuseck
+     LogLevel Quiet
+     ProxyCommand ssh -l jjbuseck login.nccs.nasa.gov direct %h
+     Protocol 2
