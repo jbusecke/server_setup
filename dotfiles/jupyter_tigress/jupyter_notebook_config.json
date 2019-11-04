@@ -1,0 +1,9 @@
+{
+  "NotebookApp": {
+    "nbserver_extensions": {
+      "jupyterlab_code_formatter": true,
+      "jupyterlab_templates.extension": true,
+      "jupyterlab_snippets.extension": true
+    }
+  }
+}

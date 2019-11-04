@@ -13,6 +13,7 @@ dependencies:
   - nodejs
   # Personal workflow stuff
   - cookiecutter
+  - widgetsnbextension
   - pip
   - pip:
     - graphviz

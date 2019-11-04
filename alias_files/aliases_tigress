@@ -1,4 +1,5 @@
-alias gc='cd /scratch/gpfs2/GEOCLIM/LRGROUP'
+alias jbgcs='cd /scratch/gpfs2/GEOCLIM/LRGROUP'
+alias gcs='cd /scratch/gpfs2/GEOCLIM/LRGROUP'
 alias gct='cd /tigress/GEOCLIM/LRGROUP'
 alias jbs='cd /scratch/gpfs/jbusecke'
 alias jbt='cd /tigress/jbusecke'
