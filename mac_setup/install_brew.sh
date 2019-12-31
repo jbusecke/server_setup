@@ -32,7 +32,8 @@ brew cask install disk-inventory-x
 brew cask install zotero
 # brew cask install omnifocus
 brew cask install google-backup-and-sync
-# brew cask install adobe-creative-cloud
+brew cask install adobe-creative-cloud
+brew cask install textexpander
 # brew cask install hazel
 brew install carbon-copy-cloner
 
