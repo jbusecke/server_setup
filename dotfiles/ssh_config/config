@@ -78,36 +78,48 @@ Host an101
 #     Princeton       #
 #######################
 
-Host tiger
-	HostName tiger.princeton.edu
-	ForwardAgent yes
-	User jbusecke
-	LocalForward 1223 localhost:1223
-	LocalForward 1224 tigercpu:1224
-	ServerAliveInterval 60
-
-Host tiger_clean
-        HostName tiger.princeton.edu
-        ForwardAgent yes
-        User jbusecke
-        ServerAliveInterval 60
+# Add this to your $HOME/.ssh/config file
+Host tigressgateway
+        Hostname tigressgateway.princeton.edu
+        ControlMaster auto
+        ControlPersist yes
+        ControlPath ~/.ssh/sockets/%p-%h-%r
+Host tigercpu
+    Hostname tigercpu.princeton.edu
+    ProxyJump jbusecke@tigressgateway
+		LocalForward 1223 localhost:1223
 
 Host tigressdata
-	HostName tigressdata.princeton.edu
-	ForwardAgent yes
-	User jbusecke
-	#ControlPath ~/.ssh/controlmasters/%r@%h:%p
-    	#ControlMaster auto
-    	#ControlPersist 24h
-	ServerAliveInterval 60
-	LocalForward 6655 localhost:6655
-        LocalForward 6656 tigressdata:6656
-	LocalForward 6657 localhost:6657
-	# NASA reverse forward
-	LocalForward 3300 localhost:19997
-	LocalForward 3301 localhost:19887
-	LocalForward 3302 localhost:17778
-        LocalForward 3303 localhost:19966
+    Hostname tigressdata.princeton.edu
+    ProxyJump jbusecke@tigressgateway
+		LocalForward 6655 localhost:6655
+
+#Host tiger
+#	HostName tiger.princeton.edu
+#	ForwardAgent yes
+#	User jbusecke
+#	LocalForward 1223 localhost:1223
+#	LocalForward 1224 tigercpu:1224
+#	ServerAliveInterval 60
+
+#Host tigressdata
+#	HostName tigressdata.princeton.edu
+#	ForwardAgent yes
+#	User jbusecke
+#	#ControlPath ~/.ssh/controlmasters/%r@%h:%p
+#    	#ControlMaster auto
+#    	#ControlPersist 24h
+#	ServerAliveInterval 60
+#	LocalForward 6655 localhost:6655
+#        LocalForward 6656 tigressdata:6656
+#	LocalForward 6657 localhost:6657
+#	# NASA reverse forward
+#	LocalForward 3300 localhost:19997
+#	LocalForward 3301 localhost:19887
+#	LocalForward 3302 localhost:17778
+#        LocalForward 3303 localhost:19966
+
+
 #######################
 #       CU/LDEO       #
 #######################
