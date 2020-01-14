@@ -86,12 +86,20 @@ Host tigressgateway
         ControlPath ~/.ssh/sockets/%p-%h-%r
 Host tigercpu
     Hostname tigercpu.princeton.edu
+<<<<<<< HEAD
     ProxyJump jbusecke@tigressgateway
+=======
+    ProxyJump laurer@tigressgateway
+>>>>>>> bf794c227c37b5211934b53e731c4295e38cbbfb
 		LocalForward 1223 localhost:1223
 
 Host tigressdata
     Hostname tigressdata.princeton.edu
+<<<<<<< HEAD
     ProxyJump jbusecke@tigressgateway
+=======
+    ProxyJump laurer@tigressgateway
+>>>>>>> bf794c227c37b5211934b53e731c4295e38cbbfb
 		LocalForward 6655 localhost:6655
 
 #Host tiger
