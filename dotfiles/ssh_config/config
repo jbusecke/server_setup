@@ -1,6 +1,7 @@
-Host *
-	UseKeychain yes
-	AddKeysToAgent yes
+# These seemed to interfere with the tigressgateway workflow...
+# Host *
+#	UseKeychain yes
+#	AddKeysToAgent yes
 
 ###################
 #      NASA       #
@@ -54,11 +55,12 @@ Host analysis
 	#IdentityFile ~/.ssh/id_rsa
 	LocalForward 7101 an101:22
         LocalForward 3344 an200:22
-	# experimental (I want to just log in once)
-	# however this doesnt work...
-	# LocalForward 5551 an200:8881
-	# for the Dask dashboard
-	#LocalForward 5552 an200:8787
+#Host analysis_boulder
+#        HostName analysis-rsa.boulder.rdhpcs.noaa.gov
+#        User Julius.Busecke
+#        #IdentityFile ~/.ssh/id_rsa
+#        LocalForward 7101 an101:22
+#        LocalForward 3344 an200:22
 Host an200
       	Hostname localhost
       	Port 3344
@@ -80,19 +82,21 @@ Host an101
 
 # Add this to your $HOME/.ssh/config file
 Host tigressgateway
-        Hostname tigressgateway.princeton.edu
-        ControlMaster auto
-        ControlPersist yes
-        ControlPath ~/.ssh/sockets/%p-%h-%r
+     User jbusecke
+     Hostname tigressgateway.princeton.edu
+     ControlMaster auto
+     ControlPersist yes
+     ControlPath ~/.ssh/sockets/%p-%h-%r
 Host tigercpu
-    Hostname tigercpu.princeton.edu
-    ProxyJump jbusecke@tigressgateway
-		LocalForward 1223 localhost:1223
+     User jbusecke
+     Hostname tigercpu.princeton.edu
+     ProxyJump jbusecke@tigressgateway
+     LocalForward 1223 localhost:1223
 
 Host tigressdata
-    Hostname tigressdata.princeton.edu
+#    Hostname tigressdata.princeton.edu
     ProxyJump jbusecke@tigressgateway
-		LocalForward 6655 localhost:6655
+#		LocalForward 6655 localhost:6655
 
 #Host tiger
 #	HostName tiger.princeton.edu
@@ -117,7 +121,6 @@ Host tigressdata
 #	LocalForward 3300 localhost:19997
 #	LocalForward 3301 localhost:19887
 #	LocalForward 3302 localhost:17778
-#        LocalForward 3303 localhost:19966
 
 
 #######################
