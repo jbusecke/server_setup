@@ -6,9 +6,7 @@ brew doctor
 
 brew install zsh
 # brew install ffmpeg # I will get this through conda
-# brew install git
 brew install wget
-# brew install unison
 brew install ssh-copy-id
 
 # brew cask installations
@@ -18,7 +16,7 @@ brew tap caskroom/cask
 brew cask install vlc
 brew cask install google-chrome
 brew cask install firefox
-# brew cask install firefox
+brew cask install opera
 brew cask install atom
 brew cask install slack
 brew cask install onyx
