@@ -56,6 +56,8 @@ plugins=(git brew osx history history-substring-search)
 export PATH="$HOME/miniconda/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
+# not sure if this is needed, but i had trouble with wget before
+export PATH="/usr/local/opt/gettext/bin:$PATH"
 
 
 source $ZSH/oh-my-zsh.sh

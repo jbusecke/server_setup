@@ -22,6 +22,3 @@ defaults write com.apple.screencapture location ~/Desktop/Screenshots
 #set up preferences for mousespeed and so on dock on the right
 
 #Disable Photos auto open when setting up a new mac
-
-# Maybe add a service that opens an iterm window wiht a right click?
-#http://stackoverflow.com/questions/420456/open-terminal-here-in-mac-os-finder
