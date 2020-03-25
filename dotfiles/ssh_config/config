@@ -94,9 +94,10 @@ Host tigercpu
      LocalForward 1223 localhost:1223
 
 Host tigressdata
-#    Hostname tigressdata.princeton.edu
-    ProxyJump jbusecke@tigressgateway
-#		LocalForward 6655 localhost:6655
+     User jbusecke
+     Hostname tigressdata.princeton.edu
+     ProxyJump jbusecke@tigressgateway
+     LocalForward 6655 localhost:6655
 
 #Host tiger
 #	HostName tiger.princeton.edu
