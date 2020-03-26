@@ -53,7 +53,7 @@ plugins=(git history history-substring-search)
 
 # User configuration
 
-export PATH="$HOME/code/miniconda/bin:$PATH"
+# export PATH="$HOME/code/miniconda/bin:$PATH"  # commented out by conda initialize
 export PATH="$HOME/bin:$PATH"
 # export PATH="/Users/juliusbusecke/anaconda2/bin:/Users/juliusbusecke/anaconda/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/TeX/texbin:/Users/juliusbusecke/bin"
 # export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:"
@@ -65,6 +65,9 @@ source /tigress/GEOCLIM/etc/profile.sh
 source $ZSH/oh-my-zsh.sh
 source $HOME/.aliases
 source ~/.iterm2_shell_integration.zsh
+# needed for synda (tool to sync CMIP data to tigress)
+export ST_HOME=/scratch/gpfs/GEOCLIM/synda
+export PATH=/scratch/gpfs/GEOCLIM/local/bin:$PATH
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -90,3 +93,19 @@ source ~/.iterm2_shell_integration.zsh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/jbusecke/code/miniconda/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/jbusecke/code/miniconda/etc/profile.d/conda.sh" ]; then
+        . "/home/jbusecke/code/miniconda/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/jbusecke/code/miniconda/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
