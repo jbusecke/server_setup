@@ -8,8 +8,10 @@ auto_activate_base: false
 changeps1: False
 
 envs_dir:
-  - /tigress/GEOCLIM/LRGROUP/jbusecke/code/conda/envs
-  - /tiger/scratch/gpfs/GEOCLIM/anaconda3
+#  - /tigress/GEOCLIM/LRGROUP/jbusecke/code/conda/envs#
+#  - /tiger/scratch/gpfs/GEOCLIM/anaconda3
+   - /tigress/jbusecke/code/conda/envs
 pkgs_dirs:
-  - /tigress/GEOCLIM/LRGROUP/jbusecke/code/conda/pkgs
-  - /tiger/scratch/gpfs/GEOCLIM/anaconda3/pkgs
+#  - /tigress/GEOCLIM/LRGROUP/jbusecke/code/conda/pkgs#
+#  - /tiger/scratch/gpfs/GEOCLIM/anaconda3/pkgs
+   - /tigress/jbusecke/code/conda/pkgs
