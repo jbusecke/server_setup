@@ -1077,9 +1077,9 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>211 616 796 486 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1585 940 570 475 0 0 2560 1417 </string>
+	<string>1457 865 1011 458 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>10 942 570 475 0 0 2560 1417 </string>
+	<string>804 770 570 475 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>1382 670 976 747 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
@@ -5087,7 +5087,9 @@
 				<real>0.50599193572998047</real>
 			</dict>
 			<key>Bound Hosts</key>
-			<array/>
+			<array>
+				<string>tigercpu</string>
+			</array>
 			<key>Character Encoding</key>
 			<integer>4</integer>
 			<key>Close Sessions On End</key>
@@ -5721,7 +5723,9 @@
 				<real>0.58823529411764708</real>
 			</dict>
 			<key>Bound Hosts</key>
-			<array/>
+			<array>
+				<string>tigressdata*</string>
+			</array>
 			<key>Character Encoding</key>
 			<integer>4</integer>
 			<key>Close Sessions On End</key>
@@ -7486,7 +7490,7 @@
 		<key>screenFrame</key>
 		<string>{{0, 0}, {2560, 1440}}</string>
 		<key>topLeft</key>
-		<string>{382, 1417}</string>
+		<string>{309, 1417}</string>
 	</dict>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
@@ -7495,7 +7499,7 @@
 	<key>NoSyncLastTipTime</key>
 	<real>555115074.71998596</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>32</integer>
+	<integer>36</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -8366,7 +8370,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-03-01T19:53:59Z</date>
+	<date>2020-03-19T15:26:02Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>
