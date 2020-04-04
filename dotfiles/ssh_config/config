@@ -99,6 +99,8 @@ Host tigressdata
      ProxyJump jbusecke@tigressgateway
      LocalForward 6655 localhost:6655
      LocalForward 6656 localhost:8787
+     LocalForward 6657 localhost:6657
+     LocalForward 6658 localhost:6658
 
 #Host tiger
 #	HostName tiger.princeton.edu
