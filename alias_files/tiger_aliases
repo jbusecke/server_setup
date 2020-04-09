@@ -1,3 +1,4 @@
+alias watch='watch '
 alias geoclim='cd /scratch/gpfs/GEOCLIM'
 alias jhome='cd /scratch/gpfs/GEOCLIM/LRGROUP/jbusecke'
 alias sq='squeue -u $(whoami) -o "%.10i %6P %.40j %.10g %8u %.2t %19S %.10M %10l %.5D %R" -S i'
