@@ -1077,11 +1077,11 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>211 616 796 486 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>938 610 1214 798 0 0 2560 1417 </string>
+	<string>1266 735 1235 679 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>203 938 570 475 0 0 2560 1417 </string>
+	<string>1246 860 570 475 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>10 728 1235 679 0 0 2560 1417 </string>
+	<string>10 932 570 475 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
 	<string>1827 763 570 475 0 0 2560 1417 </string>
 	<key>New Bookmarks</key>
@@ -4548,6 +4548,7 @@
 			<key>Bound Hosts</key>
 			<array>
 				<string>tigercpu*</string>
+				<string>tiger-h*</string>
 			</array>
 			<key>Character Encoding</key>
 			<integer>4</integer>
@@ -7033,13 +7034,13 @@
 	</array>
 	<key>NoSyncAllAppVersions</key>
 	<array>
-		<string>3.3.2</string>
-		<string>3.2.9</string>
-		<string>3.3.1</string>
 		<string>3.3.8</string>
-		<string>3.3.7</string>
+		<string>3.3.1</string>
 		<string>3.3.3</string>
+		<string>3.3.7</string>
 		<string>3.3.9</string>
+		<string>3.2.9</string>
+		<string>3.3.2</string>
 	</array>
 	<key>NoSyncBFPFavorites</key>
 	<array>
@@ -7068,7 +7069,7 @@
 	<key>NoSyncLastTipTime</key>
 	<real>555115074.71998596</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>37</integer>
+	<integer>42</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -7939,7 +7940,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-04-01T00:14:24Z</date>
+	<date>2020-04-09T00:14:18Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>

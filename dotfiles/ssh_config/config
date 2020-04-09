@@ -91,7 +91,7 @@ Host tigercpu
      User jbusecke
      Hostname tigercpu.princeton.edu
      ProxyJump jbusecke@tigressgateway
-     LocalForward 1223 localhost:1223
+#     LocalForward 1223 localhost:1223
 
 Host tigressdata
      User jbusecke
