@@ -1,0 +1,9 @@
+
+channels:
+  - conda-forge
+  - defaults
+
+envs_dirs:
+   - /scratch/gpfs2/jbusecke/conda_tigressdata/envs
+pkgs_dirs:
+   - /scratch/gpfs2/jbusecke/conda_tigressdata/pkgs
