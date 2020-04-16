@@ -1,0 +1,15 @@
+
+channels:
+  - conda-forge
+  - defaults
+
+envs_dirs:
+   - /scratch/gpfs/jbusecke/conda_tigercpu/envs
+#   - /tigress/jbusecke/code/conda/envs 
+#  - /tigress/GEOCLIM/LRGROUP/jbusecke/code/conda/envs
+#  - /scratch/gpfs/GEOCLIM/anaconda3
+pkgs_dirs:
+   - /scratch/gpfs/jbusecke/conda_tigercpu/pkgs
+#   - /home/jbusecke/code/miniconda/pkgs
+#  - /tigress/GEOCLIM/LRGROUP/jbusecke/code/conda/pkgs
+#  - /scratch/gpfs/GEOCLIM/anaconda3/pkgs
