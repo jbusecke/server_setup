@@ -4,6 +4,15 @@
 #	AddKeysToAgent yes
 
 ###################
+#    General      #
+##################
+
+Host *
+    	ServerAliveInterval 60
+	ConnectTimeout 60
+
+
+###################
 #      NASA       #
 ###################
 
