@@ -4,6 +4,11 @@ conda install -y -c conda-forge nodejs # This should be present in the base cond
 # dask labextension (probably the most useful thing right now)
 jupyter labextension install dask-labextension 
 
+# The code formatter is gold!
+jupyter labextension install @ryantam626/jupyterlab_code_formatter
+conda install -c conda-forge jupyterlab_code_formatter
+jupyter serverextension enable --py jupyterlab_code_formatter
+
 # pyviz toc github (all working without extra wurst)
 jupyter labextension install @pyviz/jupyterlab_pyviz @jupyterlab/toc @jupyterlab/github @jupyterlab/git
 jupyter labextension install jupyterlab-drawio
@@ -17,11 +22,6 @@ jupyter labextension install @krassowski/jupyterlab_go_to_definition
 
 # this is for ipywidgets?
 jupyter labextension install @jupyter-widgets/jupyterlab-manager
-
-# The code formatter is gold!(not sure if the automatic install works)
-jupyter labextension install @ryantam626/jupyterlab_code_formatter
-#pip install jupyterlab_code_formatter
-#jupyter serverextension enable --py jupyterlab_code_formatter
 
 # templates (testing)
 pip install jupyterlab_templates
