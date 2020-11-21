@@ -10,12 +10,8 @@ conda install -c conda-forge jupyterlab_code_formatter
 jupyter serverextension enable --py jupyterlab_code_formatter
 
 # pyviz toc github (all working without extra wurst)
-jupyter labextension install @pyviz/jupyterlab_pyviz @jupyterlab/toc @jupyterlab/github @jupyterlab/git
+jupyter labextension install @pyviz/jupyterlab_pyviz @jupyterlab/toc
 jupyter labextension install jupyterlab-drawio
-
-# git extension
-jupyter labextension install @jupyterlab/git
-jupyter serverextension enable --py jupyterlab_git
 
 # go to definition (not sure if this works)
 jupyter labextension install @krassowski/jupyterlab_go_to_definition
