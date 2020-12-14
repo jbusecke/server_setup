@@ -7,6 +7,9 @@ rm miniconda.sh
 # not sure if this is needed, but i had trouble with wget before
 # echo 'export PATH="/usr/local/opt/gettext/bin:$PATH"' >> ~/.zshrc
 
+# this needs an existing .zshrc file (see full setup)
+
+source ~/.zshrc
 conda init zsh
 source ~/.zshrc
 
