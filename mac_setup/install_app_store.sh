@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# these do not seem to work yet with rosetta...ill install manually
 brew install mas-cli/tap/mas
 
 mas install 497799835 #xcode
