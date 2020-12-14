@@ -3,7 +3,7 @@
 cd ~/Downloads
 wget http://repo.continuum.io/miniconda/Miniconda3-latest-MacOSX-x86_64.sh -O miniconda.sh;
 bash miniconda.sh -b -p ~/miniconda
-rm Miniconda3-latest-MacOSX-x86_64.sh
+rm miniconda.sh
 # not sure if this is needed, but i had trouble with wget before
 # echo 'export PATH="/usr/local/opt/gettext/bin:$PATH"' >> ~/.zshrc
 
