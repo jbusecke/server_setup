@@ -9,10 +9,10 @@ softwareupdate --install-rosetta #this raises a prompt...is there an option to s
 arch -x86_64 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 arch -x86_64 brew doctor
 
-arch -x86_64 brew install zsh
+# arch -x86_64 brew install zsh # the new macos runs zsh
 # brew install ffmpeg # I will get this through conda
 arch -x86_64 brew install wget
-arch -x86_64 brew install ssh-copy-id
+# arch -x86_64 brew install ssh-copy-id # I dont really need this anymore I think. I usually do this manually.
 
 # brew cask installations
 arch -x86_64 brew tap caskroom/cask
@@ -33,7 +33,7 @@ arch -x86_64 brew install carbon-copy-cloner
 
 
 # these will ask for password
-arch -x86_64 brew cask install homebrew/cask-drivers/sony-ps4-remote-play homebrew/cask-drivers/qnap-external-raid-manager
+arch -x86_64 brew cask install homebrew/cask-drivers/qnap-external-raid-manager
 
 
 # in .zshrc set  /usr/local/bin: before /usr/bin:
@@ -41,8 +41,7 @@ arch -x86_64 brew cask install homebrew/cask-drivers/sony-ps4-remote-play homebr
 #brew tap homebrew/dupes
 #brew install rsync
 
-brew cask doctor
-brew doctor
+arch -x86_64 brew doctor --verbose
 
-brew cleanup
-brew cask cleanup
+arch -x86_64 brew cleanup
+# arch -x86_64 brew cask cleanup # doesnt seem to work anymore (I suppose the cask thing is now working with the regular syntax)
