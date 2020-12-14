@@ -30,6 +30,7 @@ arch -x86_64 brew cask install adobe-creative-cloud
 arch -x86_64 brew cask install textexpander
 # brew cask install hazel
 arch -x86_64 brew install carbon-copy-cloner
+arch -x86_64 brew install --cask visual-studio-code
 
 
 # these will ask for password
