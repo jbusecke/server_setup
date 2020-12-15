@@ -17,7 +17,7 @@ source ~/.zshrc
 conda create -n dummy python=3.8 -y
 conda activate dummy
 # create the perfect base env
-conda env update -f ~/code/server_setup/conda_files/base.yml -y
+conda env update -f ~/code/server_setup/conda_files/base.yml # might raise a prompt
 conda deactivate # switch back to base env
 
 # remove dummy
