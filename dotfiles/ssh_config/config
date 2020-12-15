@@ -7,11 +7,16 @@
 #    General      #
 ##################
 
+#Host *
+#	UseKeychain yes
+# 	AddKeysToAgent yes
+#    	ServerAliveInterval 60
+#	ConnectTimeout 60
+
 Host *
-	UseKeychain yes
- 	AddKeysToAgent yes
-    	ServerAliveInterval 60
-	ConnectTimeout 60
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_rsa
 
 
 ###################
