@@ -53,7 +53,7 @@ plugins=(git brew osx history history-substring-search)
 
 # User configuration
 
-export PATH="$HOME/miniconda/bin:$PATH"
+# export PATH="$HOME/miniconda/bin:$PATH"  # commented out by conda initialize
 export PATH="$HOME/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 # not sure if this is needed, but i had trouble with wget before
@@ -86,3 +86,19 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/juliusbusecke/miniconda/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/juliusbusecke/miniconda/etc/profile.d/conda.sh" ]; then
+        . "/Users/juliusbusecke/miniconda/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/juliusbusecke/miniconda/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+

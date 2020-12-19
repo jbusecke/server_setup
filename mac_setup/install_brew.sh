@@ -1,43 +1,40 @@
 #!/bin/sh
 # Bash script to install all available software with Homebrew
-#
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew doctor
 
-brew install zsh
+# needed for m1 installation (needs to be modified if installing on another mac
+softwareupdate --install-rosetta #this raises a prompt...is there an option to silently install?
+
+# for intel based mac, remove the "arch -x86_64 " before each line 
+
+arch -x86_64 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+arch -x86_64 brew doctor
+
+# arch -x86_64 brew install zsh # the new macos runs zsh
 # brew install ffmpeg # I will get this through conda
-brew install wget
-brew install ssh-copy-id
+arch -x86_64 brew install wget
+# arch -x86_64 brew install ssh-copy-id # I dont really need this anymore I think. I usually do this manually.
 
 # brew cask installations
-brew tap caskroom/cask
+arch -x86_64 brew tap caskroom/cask
 
 #brew cask install dropbox
-brew cask install vlc
-brew cask install google-chrome
-brew cask install firefox
-brew cask install opera
-brew cask install atom
-brew cask install slack
-brew cask install onyx
-brew cask install skype
-brew cask install app-cleaner
+arch -x86_64 brew cask install firefox
+arch -x86_64 brew cask install slack
+arch -x86_64 brew cask install skype
+arch -x86_64 brew cask install app-cleaner
 # brew cask install typora
-brew cask install iterm2
-brew cask install spotify
-# brew cask install mactex
-brew cask install disk-inventory-x
-brew cask install zotero
-# brew cask install omnifocus
-brew cask install google-backup-and-sync
-brew cask install adobe-creative-cloud
-brew cask install textexpander
+arch -x86_64 brew cask install iterm2
+arch -x86_64 brew cask install disk-inventory-x
+arch -x86_64 brew cask install google-backup-and-sync
+arch -x86_64 brew cask install adobe-creative-cloud
+arch -x86_64 brew cask install textexpander
 # brew cask install hazel
-brew install carbon-copy-cloner
+arch -x86_64 brew install carbon-copy-cloner
+arch -x86_64 brew install --cask visual-studio-code
 
 
 # these will ask for password
-brew cask install homebrew/cask-drivers/sony-ps4-remote-play homebrew/cask-drivers/qnap-external-raid-manager
+arch -x86_64 brew cask install homebrew/cask-drivers/qnap-external-raid-manager
 
 
 # in .zshrc set  /usr/local/bin: before /usr/bin:
@@ -45,8 +42,7 @@ brew cask install homebrew/cask-drivers/sony-ps4-remote-play homebrew/cask-drive
 #brew tap homebrew/dupes
 #brew install rsync
 
-brew cask doctor
-brew doctor
+arch -x86_64 brew doctor --verbose
 
-brew cleanup
-brew cask cleanup
+arch -x86_64 brew cleanup
+# arch -x86_64 brew cask cleanup # doesnt seem to work anymore (I suppose the cask thing is now working with the regular syntax)
