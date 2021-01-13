@@ -107,6 +107,13 @@ Host tigercpu
      User jbusecke
      Hostname tigercpu.princeton.edu
      ProxyJump jbusecke@tigressgateway
+     # Ports are set up dynamically, since the nodes always change
+
+Host tigergpu
+     User jbusecke
+     Hostname tigergpu.princeton.edu
+     ProxyJump jbusecke@tigressgateway
+     # Ports are set up dynamically, since the nodes always change
 
 Host tigressdata
      User jbusecke

@@ -27,7 +27,7 @@ arch -x86_64 brew cask install iterm2
 arch -x86_64 brew cask install disk-inventory-x
 arch -x86_64 brew cask install google-backup-and-sync
 arch -x86_64 brew cask install adobe-creative-cloud
-arch -x86_64 brew cask install textexpander
+#arch -x86_64 brew cask install textexpander not the most recent version...
 # brew cask install hazel
 arch -x86_64 brew install carbon-copy-cloner
 arch -x86_64 brew install --cask visual-studio-code
