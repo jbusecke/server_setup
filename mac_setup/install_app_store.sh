@@ -9,6 +9,7 @@ mas install 1435957248 #Drafts (14.2)
 mas install 775737590 #iA Writer (5.2.8)
 mas install 425264550 #Disk Speed Test (3.2)
 mas install 904280696  #Things 3 (3.11)
+# add 1password
 
 # these seem to be installed by default now.
 # mas install 409183694 #Keynote (9.1)
